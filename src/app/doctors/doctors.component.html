@@ -1,0 +1,119 @@
+<div id="spa" class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+
+</div>
+
+<div class="doctors">
+  <div class="container-fluid">
+  
+  
+    <div class="title-section">
+      <div class="row" style="margin-bottom: 20px;">
+        <div class="col-8">
+          <h2 class="z2 pt-5 bold">TOP Doctors</h2>
+          <img
+            class="under-line"
+            src="../../assets/imgs/line-purple.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <owl-carousel
+      [options]="{
+        responsive: {
+          '0': { items: 2, loop: true },
+          '400': { items: 2, loop: true },
+          '600': { items: 3, loop: true },
+          '1000': { items: 7 }
+        },
+        animateOut: true,
+        margin: 10,
+        dots: false,
+        slideBy: 6,
+        navSpeed: 100,
+        navs: true,
+        navigation: true,
+        loop: false
+      }"
+      [items]="doctor"
+      [carouselClasses]="['owl-theme', 'row', 'sliding']"
+    >
+      <div class="item" *ngFor="let doc of doctor; let i = index">
+        <a
+          (click)="getInstId(doc.id)"
+          [routerLink]="['/single-doctor', doc.id]"
+          routerLinkActive="router-link-active"
+        >
+          <!-- <h4></h4> -->
+          <div class="card">
+            <div class="info">
+              <div class="row">
+                <div class="col-md-8">
+              <p>
+                <i class="fas fa-hand-paper" style="font-size: 14px;"></i>
+                {{ doc.first_name }} {{ doc.last_name }}
+              </p>
+              <p>
+                <i
+                  class="fas fa-signature"
+                  style="font-size: 14px; color: black;"
+                ></i
+                >{{ doc.username }}
+              </p>
+              <p>
+                <i class="fas fa-mobile" style="font-size: 17px;"></i>
+                {{ doc.phone }}
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p>
+                <i class="fas fa-user-md" style="font-size: 20px;"></i>
+                {{ doc.type }}
+              </p>
+              <p>
+                <i
+                  class="fas fa-briefcase-medical"
+                  style="font-size: 20px;"
+                ></i>
+                {{ doc.chanel }}
+              </p>
+              <p *ngIf="doc.details != null">
+                {{ doc.details.id }}
+              </p>
+            </div>
+          </div>
+            </div>
+            <img
+              *ngIf="doc.details != null"
+              [src]="doc.details.image_url"
+              class="card-img-top"
+              alt="..."
+            />
+            <img
+              *ngIf="doc.details == null"
+              src="../../assets/imgs/00@2x.jpg"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ doc.first_name }} {{ doc.last_name }}
+              </h5>
+              <p class="card-text">{{ doc.type }}</p>
+              <ul>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+                <li><i class="fas fa-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+    </owl-carousel>
+  </div>
+</div>

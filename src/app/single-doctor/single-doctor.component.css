@@ -1,0 +1,88 @@
+.single-doctor {
+  height: 100%;
+}
+.single-doctor .doctor-imgname {
+  height: 222px;
+}
+.single-doctor .doctor-imgname ul {
+  list-style: none;
+}
+
+.single-doctor .doctor-imgname ul li {
+  display: inline-flex;
+  margin: 3px;
+  color: #c3c3c3;
+}
+
+.single-doctor .doctor-imgname .img-name {
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  left: 111px;
+}
+
+.single-doctor .doctor-imgname .img-name img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.single-doctor .doctor-information .info-data {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.single-doctor .doctor-information .info-contact {
+  background-color: #ccc;
+}
+.single-doctor .doctor-information .info-contact i {
+  margin-left: 12px;
+}
+.single-doctor .info-data {
+  height: 100%;
+  width: 100%;
+}
+.single-doctor .info-data h4 {
+  margin: 15px 15px;
+}
+.single-doctor .info-data p {
+  margin: 0 20px;
+}
+.single-doctor .info-contact {
+  height: 139%;
+  width: 100%;
+  border-radius: 10px;
+}
+.single-doctor .info-contact .info-contact-head {
+  height: 30%;
+}
+.single-doctor .info-contact .info-contact-head a {
+  cursor: pointer;
+}
+.single-doctor .info-contact .info-contact-head h3 {
+  margin: 15px 15px;
+}
+.single-doctor .info-contact p {
+  /* margin: 0 20px; */
+}
+.single-doctor .info-contact .line {
+  content: "";
+  width: 81%;
+  height: 1px;
+  border-bottom: 2px solid #e4e2e2;
+  text-align: center;
+  margin: 1px 39px;
+}
+.single-doctor .info-contact .doctor-appointment .details {
+  color: #fff;
+  background-color: darkgreen;
+  text-align: center;
+  width: 89%;
+  height: 90%;
+  border-radius: 5px;
+  margin: 20px 10px;
+}
+.single-doctor .info-contact .doctor-appointment h4 {
+  margin: 2px 47px;
+}
+.single-doctor .info-contact .doctor-appointment .details h6 {
+  padding-top: 10px;
+}
